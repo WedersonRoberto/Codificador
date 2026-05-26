@@ -1,0 +1,203 @@
+/* Variáveis globais */
+:root{
+    --cor-fundo-escuro:#021811;
+    --cor-fundo-medio:#042e1a;
+    --cor-fundo-card:#062d33;
+    --cor-fundo-nav:#051626;
+    --cor-fundo-cabecalho:#030f1e;
+    --cor-fundo-rodape:#010a12;
+    --cor-primaria:#0d8fff;
+    --cor-primaria-hover:#3aaeff;
+    --cor-acento:#00d4ff;
+    --cor-texto:#cce4ff;
+    --cor-texto-fraco:#5f8caa;
+    --cor-branco:#ffffff;
+    --cor-erro:#ff6b6b;
+    --cor-sucesso:#4ade80;
+    --fonte-principal:'Exo 2 ',monospace;
+    --fonte-mono :'jetbrains mono', monospace;
+    --raio-borda :12px;
+    --sombra-card : 0 4px 30px rgba(0, 120, 255, 0.8);
+    --sombra-brilho : 0 0 200px rgba(13, 143, 255,0.25);
+
+    /* Reseta base */
+    *,
+    *::before,
+    *::after{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        /* corpo da página */
+        body{
+            font-family: var(--fonte-principal);
+            background-color: var(--cor-fundo-escuro);
+            color:var(--cor-texto);
+            line-height: 1.7;
+            -webkit-font-smoothing:antialiased;
+            /* Cabeçalho */        
+    }
+    .container-cabecalho{
+        background-color: var(--cor-fundo-cabecalho);
+        padding:36px 60px ;
+        border-bottom: 1px solid rgba(13, 143, 255,0.2);
+        position: relative;
+        overflow: hidden;
+    }
+        .container-cabecalho::before{
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: -60px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at center , rgba(13, 143, 255, 0.3)0% ,transparent 70%);
+            pointer-events: none;
+        }
+        /* Logo e texto lado a lado */
+        .cabecalho-inner{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+
+        }
+        .container-navegacao{
+            background-color: var(--cor-fundo-nav);
+            padding: 12px 60px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid rgba(13, 143, 255,0.2);
+            justify-content: center;
+        }
+        .btn-primary{
+            background-color:  #319ea0c2;
+            color: var(--cor-branco);
+            padding: 10px 20px;
+            border-radius: var(--raio-borda);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary{
+            background-color:  #319ea0c2;
+            color: var(--cor-texto);
+            padding: 10px 20px;
+            border-radius: var(--raio-borda);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-tertiary{
+            background-color:  #319ea0c2;
+            color: var(--cor-branco);
+            padding: 10px 20px;
+            border-radius: var(--raio-borda);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-quaternary{
+            background-color: #319ea0c2;
+            color: var(--cor-branco);
+            padding: 10px 20px;
+            border-radius: var(--raio-borda);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .container-navegacao a:hover{
+            background-color: var(--cor-primaria-hover);
+
+        }
+        .container-sobre-mim{
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .container-sobre-mim h2{
+            color: var(--cor-primaria);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .container-sobre-mim .servico{
+            background-color: var(--cor-fundo-card);
+            padding: 20px;
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-card);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .container-sobre-mim .servico img{
+            align-items: center;
+            border: 4px solid var(rgba(39, 25, 84, 0));
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-card);
+        }
+         /* Container de habilidades */
+         .container-habilidades{
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .container-habilidades img{
+            align-items: center;
+            border: 4px solid var(rgba(39, 25, 84, 0));
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-card);}
+        .container-habilidades h2{
+            color: var(--cor-primaria);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .container-habilidades .servico{
+            background-color: var(--cor-fundo-card);
+            padding: 20px;
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-card);
+            display: flex;
+             align-items: center;
+            gap: 20px;
+        }
+        .container-habilidades .servico img{ 
+            align-items: center;
+            border: 4px solid var(rgba(39, 25, 84, 0));
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-card);
+    
+        }
+            /* Container de missão */
+        .container-missao{
+             max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .container-missao h2{
+            color: var(--cor-primaria);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .container-missao .servico{
+            background-color: var(--cor-fundo-card);
+            padding: 20px;
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-card);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .container-missao img{ 
+            align-items: center;
+            border: 4px solid var(rgba(39, 25, 84, 0));
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-card);
+
+        }
+        
+         /* Rodapé */
+         footer{
+            background-color: var(--cor-fundo-rodape);
+            text-align: center;
+            padding: 20px;
+            color: var(--cor-texto-fraco);
+         }
+
+}
