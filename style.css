@@ -126,6 +126,12 @@
             align-items: center;
             gap: 20px;
         }
+        .servico {
+            flex-direction: column;
+        }
+        .container-sobre-mim .servico p{
+            flex: 1;
+        }
         .container-sobre-mim .servico img{
             align-items: center;
             border: 4px solid var(rgba(39, 25, 84, 0));
@@ -220,6 +226,46 @@
             flex-direction: column;
             gap: 15px;
             margin-top: 20px;
+        }
+        .label{
+            font-weight: bold;
+            color: var(--cor-texto-fraco);
+            background-color: var(--cor-fundo-card);
+            padding: 10px;
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-card);
+        }
+        .container-contato form input{
+            padding: 10px;
+            border-radius: var(--raio-borda);
+            border: 1px solid var(--cor-texto-fraco);
+            background-color: var(--cor-fundo-card);
+            color: var(--cor-texto);
+            box-shadow: var(--sombra-card);
+        }
+        .container-contato form textarea{
+            padding: 10px;
+            border-radius: var(--raio-borda);
+            border: 1px solid var(--cor-texto-fraco);
+            background-color: var(--cor-fundo-card);
+            color: var(--cor-texto);
+            box-shadow: var(--sombra-card);
+        }
+        .container-contato form button{
+            position: relative;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            align-self: flex-start;
+            background-color: var(--cor-primaria);
+            color: var(--cor-branco);
+            padding: 10px 20px;
+            border-radius: var(--raio-borda);
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
     footer{
             background-color: var(--cor-fundo-rodape);
